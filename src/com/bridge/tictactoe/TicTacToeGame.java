@@ -18,27 +18,18 @@ public class TicTacToeGame {
 		char[] board = createBoard();
 		player = ChooseLetter();
 		if (player == 'X') {
-			computer = 'O';
+			computer = '0';
 		} else {
 			computer = 'X';
 		}
 		System.out.println("Computer Letter is=>" + computer + " " + "Player letter is=>" + player);
-		showBoard(board);
-	}
-	
-	private static void showBoard(char[] board) {
-		System.out.println( " | " + board[1] + " | " + board[2] + " | " + board[3]);
-		System.out.println("------------");
-		System.out.println( " | " + board[4] + " | " + board[5] + " | " + board[6]);
-		System.out.println("------------");
-		System.out.println( " | " + board[7] + " | " + board[8] + " | " + board[9]);
-		
+
 	}
 
 	private static char ChooseLetter() {
 		System.out.println("Choose letters for Player and computer");
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter For Player(X/O)");
+		System.out.println("Enter For Player(X/0)");
 		player = sc.next().charAt(0);
 		return player;
 	}
@@ -54,6 +45,5 @@ public class TicTacToeGame {
 		System.out.println("Borad Created");
 		return board;
 	}
-	
 
 }
